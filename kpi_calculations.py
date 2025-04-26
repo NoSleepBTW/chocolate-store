@@ -45,3 +45,26 @@ print(monthly.round(2), "\n")
 
 print("Month-over-Month Growth (%):")
 print(mom_pct.round(1).astype(str) + "%")
+
+# Only allows print when run as a script, not on import
+if __name__ == "__main__":
+    print(f"Total Revenue: ${total_revenue:,.2f}")
+    print(f"Total Boxes Sold: {total_units:,}")
+    print(f"Total Orders: {total_orders:,}")
+    print(f"Average Order Value: ${aov:,.2f}")
+    print(f"Revenue Per Box: ${rpb:,.2f}\n")
+
+    print("Top 5 Products by Revenue:")
+    print(product_revenue.head(5), "\n")
+
+    print("Top 5 Countries by Revenue:")
+    print(country_revenue.head(5), "\n")
+
+    print("Sales by Salesperson:")
+    print(sales_leaderboard.head(10), "\n")
+
+    print("Monthly Revenue:")
+    print(monthly.round(2), "\n")
+
+    print("Month-over-Month Growth (%):")
+    print(mom_pct.round(1).astype(str) + "%")
